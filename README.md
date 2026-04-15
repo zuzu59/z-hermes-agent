@@ -1,5 +1,5 @@
 # Petit script pour installer et démarrer très facilement Hermes Agent dans un container Docker
-zf260415.2343
+zf260415.1700, zf260416.0035
 
 
 1) ./install.sh
@@ -18,6 +18,17 @@ hermes --help
 ATTENTION, pour que la connexion avec Telegram fonctionne, il faut toujours faire après:
 
 ./start-gateway.sh
+
+
+Pour entrer dans le container et utiliser directement Hermes Agent faire:
+
+docker exec -it hermes-agent bash
+
+puis faire une alias avec:
+
+alias hermes="/opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes"
+
+
 
 
 Pour démarrer la web UI dashboard
