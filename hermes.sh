@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour démarrer Hermes Agent
-#zf260415.1756, zf260415.1832
+#zf260415.1756, zf260415.2357
 
 # source: https://hermes-agent.nousresearch.com/docs/user-guide/docker
 
@@ -16,16 +16,6 @@ docker run -it \
   --restart unless-stopped \
   -e TZ="Europe/Paris" \
   nousresearch/hermes-agent $*
-
-
-
-exit
-
-docker run -it --rm \
-  -v ~/.hermes:/opt/data \
-  --network host \
-  nousresearch/hermes-agent $1
-
 
 
 
