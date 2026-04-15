@@ -1,9 +1,36 @@
 # Petit script pour installer et démarrer très facilement Hermes Agent dans un container Docker
-zf260415.233436
+zf260415.2343
 
 
 1) ./install.sh
 2) déconnexion et reconnexion
 3) hermes setup
-4) hermes gateway run
+4) ./start.sh
+
+Après il tourne tout le temps
+
+Si on veut faire tourner hermes en forground il faut faire:
+
+hermes chat
+
+hermes --help
+
+ATTENTION, pour que la connexion avec Telegram fonctionne, il faut toujours faire après:
+
+./start-gateway.sh
+
+
+Pour démarrer la web UI dashboard
+
+hermes dashboard
+
+puis un tunnel sur sa machine
+
+ssh -N -L 9119:127.0.0.1:9119 ubuntu@192.168.0.200
+
+et après dans le browser sur sa machine
+
+http://localhost:9119/
+
+
 
