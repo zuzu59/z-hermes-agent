@@ -1,0 +1,19 @@
+ATTENTION NE FONCTIONNE PAS !
+# zf260415.2332
+
+services:
+  hermes-agent:
+    image: nousresearch/hermes-agent:latest
+    container_name: hermes-agent
+    command: gateway run
+    volumes:
+      - ~/.hermes:/opt/data
+      # Persist config, state, sessions, skills, memory across restarts
+      #- hermes-home:/root/.hermes
+      # Expose agent source so the WebUI can install dependencies from it
+      #- hermes-agent-src:/opt/hermes
+#    environment:
+#      - HERMES_HOME=/root/.hermes
+    restart: unless-stopped
+
+
